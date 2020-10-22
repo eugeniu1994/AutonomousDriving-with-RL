@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8adac85d-04a5-4f52-947d-8d9770470c25" name="Default Changelist" comment="" />
+    <list default="true" id="8adac85d-04a5-4f52-947d-8d9770470c25" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/DDPG.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gym_race/envs/pyrace_2d.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym_race/envs/pyrace_2d.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +37,12 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="JupyterTrust" id="616026eb-196b-450e-bf25-b7019b713af3" />
   <component name="ProjectId" id="1j8TouaYaBJKpjuZ7ZkTqNz2ROe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -33,7 +60,7 @@
       <recent name="$PROJECT_DIR$/gym_race" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.User_record">
+  <component name="RunManager" selected="Python.DDPG (1)">
     <configuration name="DDPG (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RL_SelfDrivingCar" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -56,7 +83,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="DDPG" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="DDPG2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="RL_SelfDrivingCar" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -64,12 +91,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/D2_car" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/D2_car/DDPG.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DDPG2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,11 +173,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.DDPG (1)" />
+        <item itemvalue="Python.DDPG2" />
         <item itemvalue="Python.User_record" />
         <item itemvalue="Python.Pyrace_RL" />
         <item itemvalue="Python.Learn_user" />
-        <item itemvalue="Python.DDPG" />
-        <item itemvalue="Python.DDPG (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -173,47 +200,59 @@
       <workItem from="1603352272538" duration="5073000" />
       <workItem from="1603357362166" duration="139000" />
       <workItem from="1603357834246" duration="2658000" />
-      <workItem from="1603361631365" duration="1409000" />
+      <workItem from="1603361631365" duration="8355000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
     <state x="639" y="413" width="424" height="484" key="FileChooserDialogImpl" timestamp="1603263763003">
       <screen x="0" y="27" width="1865" height="1053" />
     </state>
     <state x="639" y="413" width="424" height="484" key="FileChooserDialogImpl/0.27.1865.1053@0.27.1865.1053" timestamp="1603263763003" />
-    <state width="1819" height="295" key="GridCell.Tab.0.bottom" timestamp="1603363003516">
+    <state width="1463" height="311" key="GridCell.Tab.0.bottom" timestamp="1603369993357">
       <screen x="0" y="27" width="1865" height="1053" />
     </state>
-    <state width="1819" height="295" key="GridCell.Tab.0.bottom/0.27.1865.1053@0.27.1865.1053" timestamp="1603363003516" />
-    <state width="1819" height="295" key="GridCell.Tab.0.center" timestamp="1603363003515">
+    <state width="1463" height="311" key="GridCell.Tab.0.bottom/0.27.1865.1053@0.27.1865.1053" timestamp="1603369993357" />
+    <state width="1463" height="311" key="GridCell.Tab.0.center" timestamp="1603369993357">
       <screen x="0" y="27" width="1865" height="1053" />
     </state>
-    <state width="1819" height="295" key="GridCell.Tab.0.center/0.27.1865.1053@0.27.1865.1053" timestamp="1603363003515" />
-    <state width="1819" height="295" key="GridCell.Tab.0.left" timestamp="1603363003515">
+    <state width="1463" height="311" key="GridCell.Tab.0.center/0.27.1865.1053@0.27.1865.1053" timestamp="1603369993357" />
+    <state width="1463" height="311" key="GridCell.Tab.0.left" timestamp="1603369993357">
       <screen x="0" y="27" width="1865" height="1053" />
     </state>
-    <state width="1819" height="295" key="GridCell.Tab.0.left/0.27.1865.1053@0.27.1865.1053" timestamp="1603363003515" />
-    <state width="1819" height="295" key="GridCell.Tab.0.right" timestamp="1603363003515">
+    <state width="1463" height="311" key="GridCell.Tab.0.left/0.27.1865.1053@0.27.1865.1053" timestamp="1603369993357" />
+    <state width="1463" height="311" key="GridCell.Tab.0.right" timestamp="1603369993357">
       <screen x="0" y="27" width="1865" height="1053" />
     </state>
-    <state width="1819" height="295" key="GridCell.Tab.0.right/0.27.1865.1053@0.27.1865.1053" timestamp="1603363003515" />
+    <state width="1463" height="311" key="GridCell.Tab.0.right/0.27.1865.1053@0.27.1865.1053" timestamp="1603369993357" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/RL_SelfDrivingCar$Learn_user.coverage" NAME="Learn_user Coverage Results" MODIFIED="1603360445184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/D2_car" />
-    <SUITE FILE_PATH="coverage/RL_SelfDrivingCar$collision.coverage" NAME="collision Coverage Results" MODIFIED="1603222069828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2D_car" />
+    <SUITE FILE_PATH="coverage/RL_SelfDrivingCar$DDPG2.coverage" NAME="DDPG2 Coverage Results" MODIFIED="1603367524221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RL_SelfDrivingCar$car_env__1_.coverage" NAME="car_env (1) Coverage Results" MODIFIED="1603298694878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/D2_car" />
-    <SUITE FILE_PATH="coverage/RL_SelfDrivingCar$User_record.coverage" NAME="User_record Coverage Results" MODIFIED="1603363042888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/D2_car_2" />
     <SUITE FILE_PATH="coverage/RL_SelfDrivingCar$main.coverage" NAME="main Coverage Results" MODIFIED="1603353183192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RL_SelfDrivingCar$DDPG.coverage" NAME="DDPG Coverage Results" MODIFIED="1603359107792" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/D2_car" />
     <SUITE FILE_PATH="coverage/RL_SelfDrivingCar$test.coverage" NAME="test Coverage Results" MODIFIED="1603354568342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RL_SelfDrivingCar$DDPG__1_.coverage" NAME="DDPG (1) Coverage Results" MODIFIED="1603357138834" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RL_SelfDrivingCar$DDPG__1_.coverage" NAME="DDPG (1) Coverage Results" MODIFIED="1603369767560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RL_SelfDrivingCar$Pyrace_RL.coverage" NAME="Pyrace_RL Coverage Results" MODIFIED="1603361865333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/D2_car_2" />
+    <SUITE FILE_PATH="coverage/RL_SelfDrivingCar$Learn_user.coverage" NAME="Learn_user Coverage Results" MODIFIED="1603360445184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/D2_car" />
+    <SUITE FILE_PATH="coverage/RL_SelfDrivingCar$collision.coverage" NAME="collision Coverage Results" MODIFIED="1603222069828" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2D_car" />
+    <SUITE FILE_PATH="coverage/RL_SelfDrivingCar$User_record.coverage" NAME="User_record Coverage Results" MODIFIED="1603364155552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/D2_car_2" />
     <SUITE FILE_PATH="coverage/RL_SelfDrivingCar$main__1_.coverage" NAME="main (1) Coverage Results" MODIFIED="1603263653305" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Kalman" />
     <SUITE FILE_PATH="coverage/RL_SelfDrivingCar$User.coverage" NAME="User Coverage Results" MODIFIED="1603351444677" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/D2_car" />
-    <SUITE FILE_PATH="coverage/RL_SelfDrivingCar$Pyrace_RL.coverage" NAME="Pyrace_RL Coverage Results" MODIFIED="1603361865333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/D2_car_2" />
     <SUITE FILE_PATH="coverage/RL_SelfDrivingCar$car_env.coverage" NAME="car_env Coverage Results" MODIFIED="1603222008622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2D_car" />
   </component>
 </project>

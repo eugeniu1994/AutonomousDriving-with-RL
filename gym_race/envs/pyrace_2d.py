@@ -1,9 +1,17 @@
 import pygame
 import math
+import numpy as np
 
 screen_width = 1500
 screen_height = 800
 check_point = ((1200, 660), (1250, 120), (190, 200), (1030, 270), (250, 475), (650, 690))
+
+discrete_action = False
+
+myRange = range(-90, 120, 45) # range(-90, 120, 45)
+myRadar_draw = myRange# range(-90, 105, 15)
+
+print('myRange ', np.shape(myRange))
 
 class Car:
     def __init__(self, car_file, map_file, pos):
@@ -25,10 +33,10 @@ class Car:
         self.check_flag = False
         self.distance = 0
         self.time_spent = 0
-        for d in range(-90, 120, 45):
+        for d in myRange:
             self.check_radar(d)
 
-        for d in range(-90, 105, 15):
+        for d in myRadar_draw:
             self.check_radar_for_draw(d)
 
     def draw(self, screen):
@@ -135,26 +143,32 @@ class PyRace2D:
         self.screen = pygame.display.set_mode((screen_width, screen_height))
         self.clock = pygame.time.Clock()
         self.font = pygame.font.SysFont("Arial", 30)
-        self.car = Car('../car.png', '../map.png', [700, 650])
-        #self.car = Car('car.png', 'map.png', [700, 650])
+        #self.car = Car('../car.png', '../map.png', [700, 650])
+        self.car = Car('car.png', 'map.png', [700, 650])
         self.game_speed = 60
         self.is_render = is_render
         self.mode = 0
 
     def action(self, action):
-        if action == 0:
-            self.car.speed += 2
-        if action == 1:
-            self.car.angle += 5
-        elif action == 2:
-            self.car.angle -= 5
+        if discrete_action:
+            if action == 0:
+                self.car.speed += 2
+            if action == 1:
+                self.car.angle += 5
+            elif action == 2:
+                self.car.angle -= 5
+        else:
+            self.car.speed += .6
+            #print('got action ',action)
+            self.car.angle += action[0]
 
         self.car.update()
         self.car.check_collision()
         self.car.check_checkpoint()
 
         self.car.radars.clear()
-        for d in range(-90, 120, 45):
+        #print('range of radars ', np.shape(myRange))
+        for d in myRange:
             self.car.check_radar(d)
 
     def evaluate(self):
@@ -165,11 +179,16 @@ class PyRace2D:
             reward = 2000 - self.car.time_spent
             self.car.time_spent = 0
         """
-        if not self.car.is_alive:
-            reward = -10000 + self.car.distance
 
-        elif self.car.goal:
-            reward = 10000
+        if discrete_action:
+            if not self.car.is_alive:
+                reward = -10000 + self.car.distance
+
+            elif self.car.goal:
+                reward = 10000
+        else:
+            reward = -1 if not self.car.is_alive else 0
+
         return reward
 
     def is_done(self):
@@ -182,10 +201,14 @@ class PyRace2D:
     def observe(self):
         # return state
         radars = self.car.radars
+
         ret = [0, 0, 0, 0, 0]
+        #ret = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        #print('ret ', np.shape(ret))
         i = 0
         for r in radars:
-            ret[i] = int(r[1] / 20)
+            #ret[i] = int(r[1] / 20)
+            ret[i] = float(r[1]/20)
             i += 1
 
         return ret
@@ -207,7 +230,7 @@ class PyRace2D:
             self.screen.fill((0, 0, 0))
 
         self.car.radars_for_draw.clear()
-        for d in range(-90, 105, 15):
+        for d in myRadar_draw:
             self.car.check_radar_for_draw(d)
         #pygame.draw.circle(self.screen, (255, 255, 0), check_point[self.car.current_check], 70, 1)
         self.car.draw_collision(self.screen)
